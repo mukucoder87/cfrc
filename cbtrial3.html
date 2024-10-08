@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Cost-Benefit Analysis Calculator for Community Facilitation and Resource Centre with BCR Ratio</title>
+    <title>Cost-Benefit Analysis Calculator for Community Facilitation Resource Centre with BCR Ratio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -89,7 +89,7 @@
 <body>
 
 <div class="container">
-    <h1>Cost-Benefit Analysis Calculator for Model Community Facilitation & Resource Centre(CFRC)</h1>
+    <h1>Cost-Benefit Analysis Calculator for Community Facilitation Resource Centre</h1>
     <form id="cbForm">
 
         <!-- Project Parameters -->
@@ -115,19 +115,19 @@
             <div class="note">* Land is free and not included in the costs.</div>
             <div class="input-group">
                 <label for="constructionCost">Construction Costs:</label>
-                <input type="number" id="constructionCost" placeholder="e.g., 500000" required>
+                <input type="number" id="constructionCost" placeholder="e.g., 50000 Rs" required>
             </div>
             <div class="input-group">
                 <label for="equipmentCost">Equipment & Facilities (Assets):</label>
-                <input type="number" id="equipmentCost" placeholder="e.g., 200000" required>
+                <input type="number" id="equipmentCost" placeholder="e.g., 20000 Rs" required>
             </div>
             <div class="input-group">
                 <label for="trainingCost">Initial Training Costs (Human Resources):</label>
-                <input type="number" id="trainingCost" placeholder="e.g., 50000" required>
+                <input type="number" id="trainingCost" placeholder="e.g., 5000 Rs" required>
             </div>
             <div class="input-group">
                 <label for="otherInitialCost">Other Initial Costs:</label>
-                <input type="number" id="otherInitialCost" placeholder="e.g., 30000" required>
+                <input type="number" id="otherInitialCost" placeholder="e.g., 3000 Rs" required>
             </div>
         </div>
 
@@ -136,19 +136,19 @@
             <h3>Annual Operational Costs (per CFRC)</h3>
             <div class="input-group">
                 <label for="staffingCost">Staffing Costs (Human Resources):</label>
-                <input type="number" id="staffingCost" placeholder="e.g., 120000" required>
+                <input type="number" id="staffingCost" placeholder="e.g., 120000 Rs" required>
             </div>
             <div class="input-group">
                 <label for="maintenanceCost">Maintenance & Utilities:</label>
-                <input type="number" id="maintenanceCost" placeholder="e.g., 50000" required>
+                <input type="number" id="maintenanceCost" placeholder="e.g., 5000 Rs" required>
             </div>
             <div class="input-group">
                 <label for="resourceCost">Resource Replenishment:</label>
-                <input type="number" id="resourceCost" placeholder="e.g., 20000" required>
+                <input type="number" id="resourceCost" placeholder="e.g., 2000 Rs" required>
             </div>
             <div class="input-group">
                 <label for="otherAnnualCost">Other Annual Costs:</label>
-                <input type="number" id="otherAnnualCost" placeholder="e.g., 10000" required>
+                <input type="number" id="otherAnnualCost" placeholder="e.g., 1000 Rs" required>
             </div>
         </div>
 
@@ -161,18 +161,18 @@
             <div class="method-title">Proxy Indicators</div>
             <div class="input-group">
                 <label for="proxyJobs">Estimated Jobs Created (per CFRC):</label>
-                <input type="number" id="proxyJobs" placeholder="e.g., 10" required>
+                <input type="number" id="proxyJobs" placeholder="e.g., 5" required>
             </div>
             <div class="input-group">
                 <label for="proxyWage">Average Wage per Job:</label>
-                <input type="number" id="proxyWage" placeholder="e.g., 30000" required>
+                <input type="number" id="proxyWage" placeholder="e.g., 3000 Rs" required>
             </div>
 
             <!-- Avoided Costs Method -->
             <div class="method-title">Avoided Costs Method</div>
             <div class="input-group">
                 <label for="expectedDamage">Expected Annual Disaster Damage (without CFRCs):</label>
-                <input type="number" id="expectedDamage" placeholder="e.g., 5000000" required>
+                <input type="number" id="expectedDamage" placeholder="e.g., 500000" required>
             </div>
             <div class="input-group">
                 <label for="damageReduction">Estimated Damage Reduction (%):</label>
@@ -183,11 +183,11 @@
             <div class="method-title">Economic Multiplier Effect</div>
             <div class="input-group">
                 <label for="initialInvestment">Initial Investment (per CFRC):</label>
-                <input type="number" id="initialInvestment" placeholder="e.g., 500000" required>
+                <input type="number" id="initialInvestment" placeholder="e.g., 50000" required>
             </div>
             <div class="input-group">
                 <label for="multiplier">Economic Multiplier:</label>
-                <input type="number" id="multiplier" placeholder="e.g., 1.5" required>
+                <input type="number" id="multiplier" placeholder="e.g., 0.75" required>
             </div>
 
             <!-- Willingness to Pay (WTP) -->
@@ -311,10 +311,10 @@
         const resultDiv = document.getElementById('result');
         resultDiv.innerHTML = `
             <h2>Results</h2>
-            <p><strong>Total Initial Capital Cost:</strong> $${totalInitialCost.toLocaleString()}</p>
-            <p><strong>Present Value of Costs (PV Costs):</strong> $${pvCosts.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</p>
-            <p><strong>Present Value of Benefits (PV Benefits):</strong> $${pvBenefits.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</p>
-            <p><strong>Net Present Value (NPV):</strong> $${NPV.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</p>
+            <p><strong>Total Initial Capital Cost(Rs):</strong> ${totalInitialCost.toLocaleString()}</p>
+            <p><strong>Present Value of Costs(Rs.) (PV Costs):</strong> ${pvCosts.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</p>
+            <p><strong>Present Value of Benefits(Rs.) (PV Benefits):</strong> ${pvBenefits.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</p>
+            <p><strong>Net Present Value (NPV in Rs.):</strong> ${NPV.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</p>
             <p><strong>Benefit-Cost Ratio (BCR):</strong> ${BCR_ratio}</p>
             <p><strong>Explanation:</strong> ${viabilityMessage}</p>
         `;
